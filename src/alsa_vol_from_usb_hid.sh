@@ -65,6 +65,8 @@ get_preferred_usb_hid_input_device() {
 get_alsa_mixer_volume() {
   # Get data for current ALSA default device
   alsa_ctl=$(amixer -D default)
+  
+  echo alsa_ctl
 
   # Find the mixer name
   local regex="'([[:print:]]+)'"
