@@ -67,13 +67,13 @@ get_alsa_mixer_volume() {
   alsa_ctl=$(amixer -D default)
 
   # Find the mixer name
-  local regex="'([[:print:]]+)'"
-  if [[ $alsa_ctl =~ $regex ]]; then
-    mixer_name="${BASH_REMATCH[1]}"
-  else
-    echo "ERROR: Unable to find default ALSA mixer."
-    exit 1
-  fi
+  #local regex="'([[:print:]]+)'"
+  #if [[ $alsa_ctl =~ $regex ]]; then
+    mixer_name="Master" #"${BASH_REMATCH[1]}"
+  #else
+    #echo "ERROR: Unable to find default ALSA mixer."
+    #exit 1
+  #fi
 
   # Find the valid playback channels
   regex="Playback channels:[[:blank:]]+([[:print:]]+)"
