@@ -8,7 +8,7 @@ SYSTEMD_CONFIG_DIR := $(CONFIG_DIR)/etc/systemd/system
 SYSTEMD_CONFIG_FILE := $(TARGET).service
 
 SYSTEM_SYSTEMD_CONFIG_DIR := ~/.config/systemd/user
-INSTALL_DIR_BIN := /usr/local/bin
+INSTALL_DIR_BIN := ~/bin
 
 install:
 	mkdir -p $(INSTALL_DIR_BIN)
